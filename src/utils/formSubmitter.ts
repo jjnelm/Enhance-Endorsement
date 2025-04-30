@@ -73,8 +73,8 @@ export const submitToGoogleForm = async (formData: FormData): Promise<void> => {
     
     const params = new URLSearchParams();
     params.append('fullName', `${formData.firstName} ${formData.lastName}`);
-    params.append('depositRefNumber', formData.traceNumber);
-    params.append('trackingNumber', formData.accountNumber);
+    params.append('depositRefNumber', formData.referenceNumber);
+    params.append('trackingNumber', formData.traceNumber);
     params.append('status', 'Endorsed');
     params.append('transactionType', 'GCA');
     params.append('email', formData.email);
